@@ -38,7 +38,7 @@ export default function ElementFrise({
 
             <div className="contenu transition-transform duration-300 flex flex-col uppercase">
                 {annee === "0000" ? (
-                    <h3 className="text-xl italic break-all">{titre}</h3>
+                    <h3 className="text-base italic break-all">{titre}</h3>
                 ) : (
                     <>
                         <h3 className="text-xl">{annee}</h3>
