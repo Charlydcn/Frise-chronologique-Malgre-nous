@@ -35,6 +35,7 @@ function App() {
     useEffect(() => {
         AOS.init({
             once: true,
+            duration: 1000
         });
     }, []);
 
@@ -704,7 +705,7 @@ function App() {
             desc: "Description du monument de Plaque ADEIF",
         },
         {
-            img: null,
+            img: "Mulhouse0002",
             imgAlt: "",
             titre: "Gare de Mulhouse",
             annee: "0000",
@@ -843,11 +844,7 @@ function App() {
                                     titre={monument.titre}
                                     annee={monument.annee}
                                     onClick={() => openModal(monument)}
-                                    dataAos={
-                                        index % 2 === 0
-                                            ? "fade-right"
-                                            : "fade-left"
-                                    }
+                                    dataAos={"fade"}
                                 />
                             );
                         })}

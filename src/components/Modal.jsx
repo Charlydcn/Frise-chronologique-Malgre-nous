@@ -33,12 +33,12 @@ export default function Modal({ isOpen, onClose, img, imgAlt, titre, annee }) {
         >
             <div
                 ref={modalRef}
-                className="bg-white overflow-y-hidden p-4 rounded shadow-lg"
+                className="bg-white overflow-y-hidden p-4 rounded shadow-lg max-w-[80vw]"
             >
                 <img
                     src={getImageUrl(img)}
                     alt={imgAlt}
-                    className="w-full max-h-[75svh] rounded mb-4"
+                    className="w-full max-h-[66svh] rounded mb-4"
                 />
 
                 <h2 className="text-3xl">{titre}</h2>
