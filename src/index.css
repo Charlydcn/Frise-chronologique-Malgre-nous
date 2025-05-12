@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-    .elementFrise {
-        @apply relative text-slate-950 w-1/2 flex items-center justify-between cursor-pointer transition-all;
-    }
-
-    .elementFrise img,
-    .elementFrise .contenu {
-        @apply transition-transform duration-300
-    }
-
     .elementFrise:nth-of-type(odd) {
         @apply pr-4 md:pr-6
     }
@@ -31,11 +22,6 @@
     }
 
 
-
-    .elementFrise .contenu {
-        @apply flex flex-col uppercase
-    }
-
     .elementFrise:nth-of-type(odd) .contenu {
         @apply items-end text-end
     }
@@ -44,23 +30,6 @@
         @apply items-start text-start
     }
 
-
-
-    /* titre */
-    .elementFrise .contenu h2 {
-        @apply text-xs italic break-all;
-    }
-
-    /* année */
-    .elementFrise .contenu h3 {
-        @apply text-xl
-    }
-
-
-
-    .elementFrise .point {
-        @apply absolute w-4 h-4 bg-slate-950 rounded-full top-1/2 z-20
-    }
     
     .elementFrise:nth-of-type(odd) .point {
         @apply -right-2
@@ -72,10 +41,6 @@
 
 
 
-    .elementFrise img {
-        @apply h-16 w-16 rounded-full aspect-square object-cover
-    }
-    
     .elementFrise:nth-of-type(odd) img {
         @apply mr-2
     }

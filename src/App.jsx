@@ -677,6 +677,13 @@ function App() {
             desc: "Description du monument de Pommier",
         },
         {
+            img: "default",
+            imgAlt: "",
+            titre: "Ruelisheim",
+            annee: "1994",
+            desc: "Description du monument de Pommier",
+        },
+        {
             img: null,
             imgAlt: "",
             titre: "Plaine",
@@ -733,7 +740,7 @@ function App() {
             desc: "Description du monument de inscription sur le momunent aux morts communal",
         },
         {
-            img: null,
+            img: "Kaysersberg0001",
             imgAlt: "",
             titre: "Kaysersberg",
             annee: "0000",
