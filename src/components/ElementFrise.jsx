@@ -9,7 +9,7 @@ export default function ElementFrise({
     dataAos,
 }) {
     const images = import.meta.glob(
-        "../assets/img/monuments/**/*.{png,jpg,jpeg,webp}",
+        "../assets/img/monuments/compressed/**/*.{png,jpg,jpeg,webp}",
         {
             eager: true,
         }
