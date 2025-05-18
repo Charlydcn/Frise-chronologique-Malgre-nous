@@ -42,7 +42,7 @@ export default function Modal({ isOpen, onClose, img, imgAlt, titre, annee }) {
                 />
 
                 <h2 className="text-3xl">{titre}</h2>
-                <p className="text-lg text-gray-600">{annee}</p>
+                <p className="text-lg text-gray-600">{annee !== "0000" ? annee : ""}</p>
             </div>
         </div>
     );

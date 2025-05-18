@@ -21,21 +21,20 @@ function App() {
     // bloquer le scroll quand modal ouverte
     useEffect(() => {
         if (isModalOpen) {
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
         }
 
         return () => {
-            document.body.style.overflow = '';
+            document.body.style.overflow = "";
         };
     }, [isModalOpen]);
-
 
     useEffect(() => {
         AOS.init({
             once: true,
-            duration: 1000
+            duration: 1000,
         });
     }, []);
 
@@ -362,10 +361,10 @@ function App() {
             desc: "Description du monument de Fontaine, mairie",
         },
         {
-            img: "default",
+            img: null,
             imgAlt: "",
             titre: "Molsheim",
-            annee: "2007",
+            annee: "2025",
             desc: "Description du monument de Arbre",
         },
         {
@@ -795,7 +794,7 @@ function App() {
             annee: "0000",
             desc: "Description du monument de Plaque ADEIF",
         },
-        
+
         {
             img: null,
             imgAlt: "",
@@ -837,24 +836,26 @@ function App() {
                     <div className="w-1 h-full z-0 rounded bg-slate-600 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
                     <div className="elementsFrise w-full h-full flex flex-col gap-8 pb-96">
-                        {monuments.sort((a, b) => b.annee - a.annee).map((monument, index) => {
-                            return (
-                                <ElementFrise
-                                    key={index}
-                                    img={
-                                        monument.img ??
-                                        cleanString(
-                                            monument.titre + monument.annee
-                                        )
-                                    }
-                                    imgAlt={monument.imgAlt}
-                                    titre={monument.titre}
-                                    annee={monument.annee}
-                                    onClick={() => openModal(monument)}
-                                    dataAos={"fade"}
-                                />
-                            );
-                        })}
+                        {monuments
+                            .sort((a, b) => b.annee - a.annee)
+                            .map((monument, index) => {
+                                return (
+                                    <ElementFrise
+                                        key={index}
+                                        img={
+                                            monument.img ??
+                                            cleanString(
+                                                monument.titre + monument.annee
+                                            )
+                                        }
+                                        imgAlt={monument.imgAlt}
+                                        titre={monument.titre}
+                                        annee={monument.annee}
+                                        onClick={() => openModal(monument)}
+                                        dataAos={"fade"}
+                                    />
+                                );
+                            })}
                     </div>
                 </div>
             </section>
@@ -864,9 +865,7 @@ function App() {
                 onClose={closeModal}
                 img={
                     modalContent.img ??
-                    cleanString(
-                        modalContent.titre + (modalContent.annee ?? "")
-                    )
+                    cleanString(modalContent.titre + (modalContent.annee ?? ""))
                 }
                 imgAlt={modalContent.imgAlt}
                 titre={modalContent.titre}
